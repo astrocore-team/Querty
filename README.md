@@ -4,4 +4,4 @@
 
 **A Discord Chatbot made in Discord.py🤖**
 
-<p style="text-align:center;"><img src="https://github.com/astrocore-team/Querty/blob/main/Assets/QuertyLogo.png?raw=true" alt="Logo" style="height: 300px; width:800px;"></p>
+<p style="text-align:center;"><img src="https://github.com/astrocore-team/Querty/blob/main/Assets/QuertyLogo.png?raw=true" alt="Logo" style="height: 300px; width:600px;"></p>
