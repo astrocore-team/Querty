@@ -1,10 +1,7 @@
-import os
-import time
 from re import I
 from time import time
 import discord
 from neuralintents import GenericAssistant
-import asyncio
 
 chatbot = GenericAssistant('intents.json')
 chatbot.train_model()
