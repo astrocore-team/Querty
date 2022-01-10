@@ -9,7 +9,7 @@ chatbot.save_model('Querty')
 
 client = discord.Client()
 
-Token = 'OTI5NDc5OTE5Nzc0MzQzMjcx.Ydn7oQ.0Yvn_4eXCdCKS5OVAbaICnzCPYE'
+Token = 'TOKEN'
 
 @client.event
 async def on_message(ctx):
