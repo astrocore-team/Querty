@@ -3,3 +3,5 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/astrocore-team/Querty?color=%234f1db3&label=Currently%20Viewing)
 
 **A Discord Chatbot made in Discord.py🤖**
+
+<p style="text-align:center;"><img src="https://github.com/astrocore-team/Querty/blob/main/Assets/QuertyLogo.png?raw=true" alt="Logo" style="height: 300px; width:800px;"></p>
