@@ -9,5 +9,10 @@
 ## Bugs or errors
 If you got any bugs you want to report you can join our [Discord](https://discord.gg/8aVJtkpk2j) or go to **Issues** on our github repository and file an issue!
 or if your fimiliar with python make a couple edits on our ``main.py`` or ``intents.json`` and send us a pull request!.
+<p>
+  <a href=“https://discord.gg/8aVJtkpk2j” title=“Discord Invite”>
+    <img src=“https://github.com/astrocore-team/Querty/blob/main/Assets/discordlogo.png?raw=true” alt=“Discord Invite” />
+  </a>
+</p>
 
 
