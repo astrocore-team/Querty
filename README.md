@@ -5,3 +5,9 @@
 **A Discord Chatbot made in Discord.py🤖**
 
 <p style="text-align:center;"><img src="https://github.com/astrocore-team/Querty/blob/main/Assets/QuertyLogo.png?raw=true" alt="Logo" style="height: 300px; width:600px;"></p>
+
+## Bugs or errors
+If you got any bugs you want to report you can join our [Discord](https://discord.gg/8aVJtkpk2j) or go to **Issues** on our github repository and file an issue!
+or if your fimiliar with python make a couple edits on our ``Shrek.py`` and send us a pull request!.
+
+
