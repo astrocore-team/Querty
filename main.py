@@ -9,7 +9,7 @@ chatbot.save_model()
 
 client = discord.Client()
 
-Token = 'TOKEN'
+Token = 'Token'
 
 @client.event
 async def on_message(ctx):
