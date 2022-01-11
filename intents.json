@@ -30,7 +30,7 @@
      "patterns": ["no", "nope", "nah"],
      "responses": ["Alright!", "ok!!", "whatever you say!"]},
     {"tag": "same",
-     "patterns": ["same", "relatable"],
+     "patterns": ["same", "relatable", "#twins", "me too", "omg, me too!"],
      "responses": ["We have so much in common!", "#Twins"]},
     {"tag": "nothing much",
         "patterns": ["nothing much", "im bored"],
@@ -129,7 +129,7 @@
             "patterns": ["can we like... have sex", "lets have sex", "sex", "have sex"],
             "responses": ["...", "weirdo..."]},
     {"tag": "whats better, python or java?",
-                "patterns": ["whats better, python or java?", "is python or java better", "python or java?"],
-                "responses": ["I prefer Python!", "Python, duh :rolling_eyes:"]}
+             "patterns": ["whats better, python or java?", "is python or java better", "python or java?"],
+             "responses": ["I prefer Python!", "Python, duh :rolling_eyes:"]}
 ]
 }
