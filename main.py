@@ -1,7 +1,6 @@
 import json
 from re import I
 from time import time
-import json
 from discord.ext.commands import bot
 from discord.ext.commands.bot import Bot
 from discord_slash import SlashCommand
@@ -19,46 +18,43 @@ chatbot.save_model()
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix='!', intents=intents)
 slash = SlashCommand(client, sync_commands=True)
+f = open("storage.json", "w")
 
-Token = 'Token'
+Token = 'OTI5NDc5OTE5Nzc0MzQzMjcx.Ydn7oQ.yt9aKhg-koleoXrV99f95XhAcjQ'
 
-channel_dict = {}
+channel_dict = {'929479523467157504': 'general'}
 
 f = open("storage.json", "w")
 json.dump(channel_dict, f)
+f.close()
 
-@slash.slash(name="Channel", description="Choose Querty chat channel", options=[create_option(name="channel", description="Channel", option_type=7, required=True) ])
-async def Channel(ctx, channel: discord.TextChannel):
+@slash.slash(name="channel", description="Choose Querty chat channel", options=[create_option(name="channel", description="Channel", option_type=7, required=True) ])
+@commands.has_permissions(administrator=True)
+async def channel(ctx, channel: discord.TextChannel):
     guild = ctx.guild.id
     
     channel_dict[guild] = channel
 
     print(channel_dict)
 
-    json.dump(channel_dict, f)
-
-@client.command()
-async def Channel(ctx, channel: discord.TextChannel):
-    guild = ctx.guild.id
-    
-    channel_dict[guild] = channel
-
-    print(channel_dict)
-
+    f = open("storage.json", "w")
     json.dump(channel_dict, f)
 
 @client.event
 async def on_message(ctx):
     guild = ctx.guild.id
-    print(channel_dict.get(guild))
+    channel = ctx.channel.name
+    print(channel_dict.get(f"{guild}"))
+
+    if channel_dict.get(f"{guild}") == "None":
+        channel_dict[f"{guild}"] = channel
 
     if ctx.author == client.user or ctx.content.startswith('?purge'):
         return
     
-    if ctx.channel.name == channel_dict.get(guild):
+    if ctx.channel.name == channel_dict.get(f"{guild}"):
         response = chatbot.request(ctx.content)
 
         await ctx.channel.send(response)
 
-f.close()
 client.run(Token)
