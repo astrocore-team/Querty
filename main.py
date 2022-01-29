@@ -32,7 +32,7 @@ async def on_message(ctx):
          asyncio.sleep(0.1)
      return
 
-    if ctx.channel.name == 'general':
+    if ctx.channel.name == '💬·chat-1':
         response = chatbot.request(ctx.content)
         await ctx.channel.send(response)
 
